@@ -1,0 +1,14 @@
+<app-form-component (addTodo)='addTodoHandler($event)'></app-form-component>
+
+<table class="table table-bordered col-md-4 ml-4">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">To Do list</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let todo of todos">
+      <th scope="row">{{ todo }}</th>
+    </tr>
+  </tbody>
+</table>

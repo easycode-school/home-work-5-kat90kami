@@ -1,0 +1,8 @@
+<form class="form-inline col-md-4 my-5" #addUserForm="ngForm" (ngSubmit)="onSubmitHandler(addUserForm)" novalidate>
+  <div class="form-group mx-sm-3 mb-2">
+    <input type="text" class="form-control" placeholder="List name" #listName="ngModel" [(ngModel)]="newTodo" name="newTodo"
+      required>
+  </div>
+  <button type="submit" class="btn btn-primary mb-2" [disabled]="addUserForm.invalid">Add List</button>
+  <div class="ml-3 text-danger" [hidden]="listName.valid || listName.pristine">Error: list name required</div>
+</form>
